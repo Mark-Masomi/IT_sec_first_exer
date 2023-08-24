@@ -18,7 +18,7 @@ public class AuthController {
         public String authenticate(@RequestBody Login login) {
 
             System.out.println(login.getPassword());
-            if (passwordService.isValidPassword(login.getPassword())) {
+            if (passwordService.isSecureValidPassword(login.getPassword())) {
                 return "Autentisering lyckades!";
             } else {
                 return "Autentisering misslyckades. Ogiltigt lösenord.";
