@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
     public class PasswordService {
 
         public boolean isValidPassword(String password) {
-            return password != null && password.matches("(\\d{4})");
+            return password.matches("(\\d{4})");
         }
     }
 //\d{4}
